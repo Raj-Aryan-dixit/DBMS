@@ -1,0 +1,26 @@
+.programs {
+  margin: 80px auto;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.program img{
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  filter: drop-shadow(0 0 0.75rem rgb(20, 9, 12));
+  transition: 10s;
+  cursor: pointer;
+}
+
+.program:hover{
+  transform: scale(1.2);
+ z-index: 2;
+}
+
+.program{
+  flex-basis: 31%;
+   transition: 0.5s;
+}

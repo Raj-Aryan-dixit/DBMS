@@ -1,0 +1,84 @@
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropdown-toggle {
+  background-color: transparent;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Dropdown menu */
+/* Dropdown menu */
+.dropdown-menu {
+  margin-top: 7px;
+  position: absolute;
+  border-radius: 10px;
+  top: 100%;
+  left:-60px;
+  background-color: rgba(0, 0, 0, 0.192); /* Transparent background */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  backdrop-filter: blur(5px); /* Apply blur effect to the background */
+}
+
+
+/* Dropdown menu items */
+.dropdown-menu li {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Dropdown menu item hover */
+.dropdown-menu li:hover {
+  font-weight: 500;
+  transform: scale(1.05); /* Scale on hover */
+}
+
+/* Show dropdown menu */
+.dropdown.show .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+
+/* Animation for dropdown menu */
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.dropdown-menu.slideIn {
+  animation: slideIn 0.3s forwards;
+}
+
+.dropdown-menu.slideOut {
+  animation: slideOut 0.3s forwards;
+}
